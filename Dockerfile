@@ -1,16 +1,10 @@
-# Stage 1: Build the application
-FROM node:alpine AS builder
+FROM node:14 AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build
 
-# Stage 2: Create the production image
-FROM node:alpine AS production
+FROM node:14-alpine
 WORKDIR /app
-COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/dist ./dist
-RUN npm install --only=production
-
+COPY --from=build /app/ ./
 CMD ["npm", "run", "start"]
