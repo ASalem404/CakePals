@@ -3,11 +3,11 @@
 ## CakePals is an app where people can sell home-baked cakes and pies to each other.
 
 Bakers can register on CakePals and list their products for sale.
-Users typically look for available offerings nearby, create a member account (if needed) and place a baking order.
-Bakers receive orders, bake and hand over ready products at the agreed collection time.
+Users typically look for available offerings nearby, create a member account (if needed), and place a baking order.
+Bakers receive orders, bake, and hand over ready products at the agreed collection time.
 Members can review orders and orders reviews form the Baker's rate
 
-## Technologies Used by this app until Now
+## Technologies Used by this App Until Now
 
     - Node.JS
     - Express.JS
@@ -18,12 +18,12 @@ Members can review orders and orders reviews form the Baker's rate
     - Stripe
     - Nodemon
 
-### NOTE: The repo is still in development and will be release an updates and use more technologies soon
+### NOTE: The repo is still in development and will be releasing updates and using more technologies soon
 
 ## Storage
 
-I go with docment database (mongoDB).
-And host database at mongo atlas.
+I go with a document database (MongoDB).
+And host database at Mongo Atlas.
 
 ### Schema
 
@@ -134,10 +134,8 @@ A simple JWT-based auth mechanism is to be used with passwords
 
 ### Error handling
 
-We will implement :
+- AppError class to handle non-existent routes even if not all its methods are used
 
-- AppError class to handling non exsisting routes even if not all its methods are used
+* Error controller as a global error handler
 
-* Error controller as global error handler
-
-- Catch Async use to grab catch block in all async functions
+- Catch Async is used to grab catch block in all async functions
