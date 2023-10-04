@@ -17,6 +17,7 @@ Members can review orders and orders reviews form the Baker's rate
     - Travis
     - Stripe
     - Nodemon
+    - Docker
 
 ### NOTE: The repo is still in development and will be releasing updates and using more technologies soon
 
@@ -62,6 +63,8 @@ And host database at Mongo Atlas.
 | baker | ref->User |
 | User | ref->User |
 
+---
+
 **Order**:
 | Attribute | Type |
 |---------- |----- |
@@ -92,6 +95,8 @@ A simple JWT-based auth mechanism is to be used with passwords
 **Products :**
 
 ```
+## Caching is used in Products APIs
+
 /products        [GET]
 /products        [POST]
 /products/:id    [GET]
